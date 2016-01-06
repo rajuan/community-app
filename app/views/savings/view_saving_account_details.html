@@ -205,6 +205,13 @@
                                 <td><span class="padded-td">{{savingaccountdetails.currency.displaySymbol}}&nbsp;{{savingaccountdetails.summary.totalInterestPosted| number}}</span>
                                 </td>
                             </tr>
+                            <tr ng-show="savingaccountdetails.summary.totalOverdraftInterestDerived">
+                                <td class="table-bold-acc fontnormal">{{'label.totaloverdraftinterestderived' |
+                                    translate}}
+                                </td>
+                                <td><span class="padded-td">{{savingaccountdetails.currency.displaySymbol}}&nbsp;{{savingaccountdetails.summary.totalOverdraftInterestDerived| number}}</span>
+                                </td>
+                            </tr>
                             <tr>
                                 <td class="table-bold-acc fontnormal">{{'label.interestrate' | translate}}</td>
                                 <td><span class="padded-td">{{savingaccountdetails.nominalAnnualInterestRate}}%</span></td>
@@ -249,6 +256,16 @@
                             <tr data-ng-show="savingaccountdetails.allowOverdraft">
                                 <td class="table-bold-acc fontnormal">{{'label.heading.overdraftlimit' | translate}}</td>
                                 <td><span class="padded-td">{{savingaccountdetails.overdraftLimit| number}}</span>
+                                </td>
+                            </tr>
+                            <tr data-ng-show="savingaccountdetails.allowOverdraft">
+                                <td class="table-bold-acc fontnormal">{{'label.heading.nominalannualinterestrateoverdraft' | translate}}</td>
+                                <td><span class="padded-td">{{savingaccountdetails.nominalAnnualInterestRateOverdraft| number}}</span>
+                                </td>
+                            </tr>
+                            <tr data-ng-show="savingaccountdetails.allowOverdraft">
+                                <td class="table-bold-acc fontnormal">{{'label.heading.minoverdraftforinterestcalculation' | translate}}</td>
+                                <td><span class="padded-td">{{savingaccountdetails.minOverdraftForInterestCalculation| number}}</span>
                                 </td>
                             </tr>
                             <tr data-ng-show="savingaccountdetails.minBalanceForInterestCalculation">
